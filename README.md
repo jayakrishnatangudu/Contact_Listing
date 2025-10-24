@@ -4,18 +4,18 @@ A modern, full-stack contact management application built with **React**, **Node
 
 ---
 
-##  Notable Features
+## Notable Features
 
-* **Add Contacts**: Create new contacts with name and phone number.
-* **View Contacts**: Display all contacts in an organized, alphabetically sorted list.
-* **Search Functionality**: Real-time search by name or phone number.
-* **Delete Contacts**: Remove contacts with confirmation dialog.
-* **Expandable Details**: Click on contacts to view/hide phone numbers.
-* **Duplicate Prevention**: Client and server-side validation to prevent duplicate entries.
-* **Responsive Design**: Works seamlessly on mobile, tablet, and desktop.
-* **Dark Mode Support**: Automatic dark mode compatibility as per your website theme prefence.
-* **Toast Notifications**: User-friendly success and error messages.
-* **Modern UI**: Built with shadcn/ui components and Tailwind CSS for a clean look.
+- **Add Contacts**: Create new contacts with name and phone number.
+- **View Contacts**: Display all contacts in an organized, alphabetically sorted list.
+- **Search Functionality**: Real-time search by name or phone number.
+- **Delete Contacts**: Remove contacts with confirmation dialog.
+- **Expandable Details**: Click on contacts to view/hide phone numbers.
+- **Duplicate Prevention**: Client and server-side validation to prevent duplicate entries.
+- **Responsive Design**: Works seamlessly on mobile, tablet, and desktop.
+- **Dark Mode Support**: Automatic dark mode compatibility as per your website theme prefence.
+- **Toast Notifications**: User-friendly success and error messages.
+- **Modern UI**: Built with shadcn/ui components and Tailwind CSS for a clean look.
 
 ---
 
@@ -23,36 +23,36 @@ A modern, full-stack contact management application built with **React**, **Node
 
 ### Frontend
 
-* **React (v18+)** – UI library for building interactive interfaces.
-* **Vite** – Fast build tool and dev server.
-* **Tailwind CSS** – Utility-first styling for rapid UI design.
-* **shadcn/ui** – Prebuilt, accessible UI components.
-* **Radix UI** – Accessible primitives for complex UI patterns.
-* **Lucide React** – Modern icon library.
-* **Axios** – HTTP client for API calls.
-* **Sonner** – Toast notifications for feedback.
+- **React (v18+)** – UI library for building interactive interfaces.
+- **Vite** – Fast build tool and dev server.
+- **Tailwind CSS** – Utility-first styling for rapid UI design.
+- **shadcn/ui** – Prebuilt, accessible UI components.
+- **Radix UI** – Accessible primitives for complex UI patterns.
+- **Lucide React** – Modern icon library.
+- **Axios** – HTTP client for API calls.
+- **Sonner** – Toast notifications for feedback.
 
 ### Backend
 
-* **Node.js (v16+)** – JavaScript runtime for server-side logic.
-* **Express.js** – Lightweight web framework.
-* **MongoDB** – NoSQL database for storing contacts.
-* **Mongoose** – MongoDB ODM for schema management.
-* **CORS** – Cross-origin requests support.
+- **Node.js (v16+)** – JavaScript runtime for server-side logic.
+- **Express.js** – Lightweight web framework.
+- **MongoDB** – NoSQL database for storing contacts.
+- **Mongoose** – MongoDB ODM for schema management.
+- **CORS** – Cross-origin requests support.
 
 > **Design Choice:** I chose shadcn/ui with Tailwind CSS for a modern, responsive UI without writing custom CSS for every component. Axios is used for simplified API requests, and Sonner gives clean toast notifications.
 
 ---
 
-##  Prerequisites
+## Prerequisites
 
-* Node.js v16+ and npm/yarn
-* MongoDB (local installation or Atlas)
-* Git
+- Node.js v16+ and npm/yarn
+- MongoDB (local installation or Atlas)
+- Git
 
 ---
 
-##  Setup Instructions (Local)
+## Setup Instructions (Local)
 
 ### 1. Clone Repository
 
@@ -93,13 +93,12 @@ PORT=4002
 MONGODB_URI=mongodb://localhost:27017/contacts
 # OR MongoDB Atlas:
 # MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/contacts?retryWrites=true&w=majority
-NODE_ENV=development
 ```
 
 **Frontend (`frontend/.env` - Optional)**
 
 ```env
-VITE_API_URL=http://localhost:4002/api
+VITE_API_URL=http://localhost:4002
 ```
 
 ### 5. Run Application
@@ -128,13 +127,13 @@ Open your browser at [http://localhost:5173](http://localhost:5173)
 
 ---
 
-##  Deployed Application
+## Deployed Application
 
 Access the live version of the app here: https://contact-listing-c8lt.vercel.app/
 
 ---
 
-##  Project Structure
+## Project Structure
 
 ```
 contact-management-app/
@@ -149,7 +148,7 @@ contact-management-app/
 │     ├── App.jsx
 │     ├── main.jsx
 │     └── index.css
-│  
+│
 └── backend/
     ├── db/
     │   └── index.js
@@ -158,20 +157,20 @@ contact-management-app/
     ├── routes/
     │   └── user.routes.js
     └── index.js
-  
+
 ```
 
 ---
 
-##  API Endpoints
+## API Endpoints
 
-**Base URL:** `http://localhost:4002/api`
+**Base URL:** `https://contact-listing.onrender.com`
 
-| Method | Endpoint            | Description            |
-| ------ | ------------------- | ---------------------- |
-| GET    | `/users/all`        | Retrieve all contacts  |
-| POST   | `/users/add`        | Add a new contact      |
-| DELETE | `/users/delete/:id` | Delete a contact by ID |
+| Method | Endpoint                | Description            |
+| ------ | ----------------------- | ---------------------- |
+| GET    | `/api/users/all`        | Retrieve all contacts  |
+| POST   | `/api/users/add`        | Add a new contact      |
+| DELETE | `/api/users/delete/:id` | Delete a contact by ID |
 
 **Example: Add Contact**
 
@@ -189,13 +188,17 @@ Success Response (201):
 {
   "success": true,
   "message": "Contact added successfully",
-  "user": { "_id": "507f1f77bcf86cd799439011", "name": "xyz", "number": "1234567890" }
+  "user": {
+    "_id": "507f1f77bcf86cd799439011",
+    "name": "xyz",
+    "number": "1234567890"
+  }
 }
 ```
 
 ---
 
-##  Usage
+## Usage
 
 1. Click **"Add New Contact"** → Fill name & phone → Save.
 2. Use search bar to filter contacts by name or number.
@@ -204,15 +207,15 @@ Success Response (201):
 
 ---
 
-##  Responsive Breakpoints
+## Responsive Breakpoints
 
-* Mobile: < 640px
-* Tablet: 640px–1024px
-* Desktop: > 1024px
+- Mobile: < 640px
+- Tablet: 640px–1024px
+- Desktop: > 1024px
 
 ---
 
-##  Author & Website
+## Author & Website
 
 **Vinay Singh** - https://github.com/Vinay3022272
 Website: https://contact-listing-c8lt.vercel.app/
@@ -220,12 +223,12 @@ Project: https://github.com/Vinay3022272/Contact_Listing
 
 ---
 
-##  Acknowledgments
+## Acknowledgments
 
-* [shadcn/ui](https://ui.shadcn.com/)
-* [Tailwind CSS](https://tailwindcss.com/)
-* [Radix UI](https://www.radix-ui.com/)
-* [Lucide](https://lucide.dev/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Lucide](https://lucide.dev/)
 
 ---
 

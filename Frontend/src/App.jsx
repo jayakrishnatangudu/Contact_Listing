@@ -20,7 +20,7 @@ function Contacts() {
 
   const fetchContacts = async () => {
     try {
-      const res = await axios.get("http://localhost:4002/api/users/all");
+      const res = await axios.get("https://contact-listing.onrender.com/api/users/all");
       console.log("Contacts from backend:", res.data);
       setContacts(sortContacts(res.data));
     } catch (error) {
@@ -58,7 +58,7 @@ function Contacts() {
       }
 
       const res = await axios.post(
-        "http://localhost:4002/api/users/add",
+        "https://contact-listing.onrender.com/api/users/add",
         newContact
       );
       const addedContact = res.data.user;
@@ -90,7 +90,7 @@ function Contacts() {
   const handleDeleteContact = async (contactId) => {
     try {
       const res = await axios.delete(
-        `http://localhost:4002/api/users/delete/${contactId}`
+        `https://contact-listing.onrender.com/api/users/delete/${contactId}`
       );
 
       if (res.data.success) {
