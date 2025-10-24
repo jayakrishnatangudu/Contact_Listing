@@ -12,7 +12,10 @@ const port = process.env.PORT || 5000;
 // Middlewares
 app.use(
   cors({
-    origin: "https://contact-listing-c8lt.vercel.app/",
+    origin: [
+      "https://contact-listing-c8lt.vercel.app",
+      "https://www.contact-listing-c8lt.vercel.app",
+    ],
     methods: ["GET", "POST", "DELETE"],
     credentials: true,
   })
