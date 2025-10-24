@@ -130,29 +130,26 @@ Open your browser at [http://localhost:5173](http://localhost:5173)
 
 ## 🌐 Deployed Application
 
-Access the live version of the app here: [https://your-deployed-app-link.com](https://your-deployed-app-link.com)
+Access the live version of the app here: [https://your-deployed-app-link.com](https://contact-listing-c8lt.vercel.app/)
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 contact-management-app/
 ├── frontend/
 │   ├── src/
-│   │   ├── components/
-│   │   │   ├── ui/          # shadcn/ui comp.
-│   │   │   ├── AddContacts.jsx
-│   │   │   └── ContactList.jsx
-│   │   ├── lib/
-│   │   │   └── utils.js
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── index.css
-│   ├── public/
-│   ├── package.json
-│   ├── vite.config.js
-│   └── tailwind.config.js
+│     ├── components/
+│     │   ├── ui/  # shadcn components
+│     │   ├── AddContacts.jsx
+│     │   └── ContactList.jsx
+│     ├── lib/
+│     │   └── utils.js
+│     ├── App.jsx
+│     ├── main.jsx
+│     └── index.css
+│  
 └── backend/
     ├── db/
     │   └── index.js
@@ -160,9 +157,8 @@ contact-management-app/
     │   └── user.model.js
     ├── routes/
     │   └── user.routes.js
-    ├── index.js
-    ├── package.json
-    └── .env
+    └── index.js
+  
 ```
 
 ---
@@ -216,11 +212,11 @@ Success Response (201):
 
 ---
 
-## 👤 Author & Website
+##  Author & Website
 
-**Your Name** - [@yourhandle](https://twitter.com/yourhandle)
-Website: [https://yourwebsite.com](https://yourwebsite.com)
-Project: [GitHub Repository](https://github.com/yourusername/contact-management-app)
+**Vinay Singh** - [@handle](https://github.com/Vinay3022272)
+Website: [https://yourwebsite.com](https://contact-listing-c8lt.vercel.app/)
+Project: [GitHub Repository](https://github.com/Vinay3022272/Contact_Listing)
 
 ---
 
