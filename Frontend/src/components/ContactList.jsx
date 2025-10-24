@@ -177,7 +177,7 @@ function ContactList({ contacts, onDeleteContact }) {
               undone.
             </DialogDescription>
           </DialogHeader>
-          <DialogFooter className="flex-col sm:flex-row gap-2 sm:gap-0">
+          <DialogFooter className="flex-col sm:flex-row gap-2 sm:gap-2">
             <DialogClose asChild>
               <Button variant="outline" className="w-full sm:w-auto">
                 Cancel
