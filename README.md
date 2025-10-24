@@ -128,9 +128,9 @@ Open your browser at [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 🌐 Deployed Application
+##  Deployed Application
 
-Access the live version of the app here: [https://your-deployed-app-link.com](https://contact-listing-c8lt.vercel.app/)
+Access the live version of the app here: https://contact-listing-c8lt.vercel.app/
 
 ---
 
@@ -214,9 +214,9 @@ Success Response (201):
 
 ##  Author & Website
 
-**Vinay Singh** - [@handle](https://github.com/Vinay3022272)
-Website: [https://yourwebsite.com](https://contact-listing-c8lt.vercel.app/)
-Project: [GitHub Repository](https://github.com/Vinay3022272/Contact_Listing)
+**Vinay Singh** - https://github.com/Vinay3022272
+Website: https://contact-listing-c8lt.vercel.app/
+Project: https://github.com/Vinay3022272/Contact_Listing
 
 ---
 
