@@ -4,9 +4,15 @@ import AddContact from "./components/AddContacts";
 import ContactList from "./components/ContactList";
 import { toast } from "sonner";
 
-function Contacts() {
+function App() {
   const [contacts, setContacts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  // ✅ Automatically switch between local & deployed backend
+  const API_BASE_URL =
+    import.meta.env.MODE === "development"
+      ? "http://localhost:5000/api/users"
+      : "https://contact-listing.onrender.com/api/users";
 
   useEffect(() => {
     fetchContacts();
@@ -20,7 +26,7 @@ function Contacts() {
 
   const fetchContacts = async () => {
     try {
-      const res = await axios.get("https://contact-listing.onrender.com/api/users/all");
+      const res = await axios.get(`${API_BASE_URL}/all`);
       console.log("Contacts from backend:", res.data);
       setContacts(sortContacts(res.data));
     } catch (error) {
@@ -57,10 +63,7 @@ function Contacts() {
         };
       }
 
-      const res = await axios.post(
-        "https://contact-listing.onrender.com/api/users/add",
-        newContact
-      );
+      const res = await axios.post(`${API_BASE_URL}/add`, newContact);
       const addedContact = res.data.user;
 
       const updatedContacts = sortContacts([...contacts, addedContact]);
@@ -89,9 +92,7 @@ function Contacts() {
 
   const handleDeleteContact = async (contactId) => {
     try {
-      const res = await axios.delete(
-        `https://contact-listing.onrender.com/api/users/delete/${contactId}`
-      );
+      const res = await axios.delete(`${API_BASE_URL}/delete/${contactId}`);
 
       if (res.data.success) {
         const updatedContacts = contacts.filter(
@@ -134,7 +135,7 @@ function Contacts() {
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-          {/* Contact List - Takes 2 columns on large screens */}
+          {/* Contact List */}
           <div className="lg:col-span-2 order-2 lg:order-1">
             <ContactList
               contacts={contacts}
@@ -142,7 +143,7 @@ function Contacts() {
             />
           </div>
 
-          {/* Add Contact - Takes 1 column on large screens */}
+          {/* Add Contact */}
           <div className="lg:col-span-1 order-1 lg:order-2">
             <div className="sticky top-4">
               <AddContact onAddContact={handleAddContact} />
@@ -154,4 +155,4 @@ function Contacts() {
   );
 }
 
-export default Contacts;
+export default App;
