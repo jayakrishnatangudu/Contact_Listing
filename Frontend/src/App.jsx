@@ -8,11 +8,9 @@ function App() {
   const [contacts, setContacts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Automatically switch between local & deployed backend
-  const API_BASE_URL =
-    import.meta.env.MODE === "development"
-      ? "http://localhost:5000/api/users"
-      : "https://contact-listing.onrender.com/api/users";
+  // ✅ Always use your deployed backend (Render)
+  const API_BASE_URL = "https://contact-listing-4qy2.onrender.com/api/users";
+
 
   useEffect(() => {
     fetchContacts();
@@ -69,6 +67,7 @@ function App() {
       const updatedContacts = sortContacts([...contacts, addedContact]);
       setContacts(updatedContacts);
 
+      toast.success("Contact added successfully!");
       return { success: true };
     } catch (error) {
       console.error("Error adding contact:", error);
